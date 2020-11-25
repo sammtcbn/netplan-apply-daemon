@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SERVICE_NAME=rad.service
+SERVICE_NAME=nad.service
 
 function failed()
 {
@@ -14,7 +14,7 @@ if [ -e /etc/systemd/system/${SERVICE_NAME} ]; then
     rm -f --preserve-root /etc/systemd/system/${SERVICE_NAME} || failed "Fail to delete service file"
 fi
 
-rm -f --preserve-root /usr/local/bin/rad.bash || failed "Fail to delete rad"
-rm -f --preserve-root /usr/local/bin/rad-uninstall.bash || failed "Fail to delete rad"
+rm -f --preserve-root /usr/local/bin/nad.bash || failed "Fail to delete nad"
+rm -f --preserve-root /usr/local/bin/nad-uninstall.bash || failed "Fail to delete nad"
 
 echo "uninstall done"

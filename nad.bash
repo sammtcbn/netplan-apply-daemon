@@ -19,10 +19,10 @@ function is_internet_connected ()
 
 while true; do
     if ! is_internet_connected ; then
-        logger rad.bash ipv4 is down , run netplan apply
+        logger nad.bash ipv4 is down , run netplan apply
         netplan apply
     fi
     sleep ${interval}
 done
 
-logger rad.bash exit
+logger nad.bash exit

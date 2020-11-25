@@ -7,7 +7,7 @@ User=root
 WorkingDirectory=/usr/local/bin
 Restart=no
 Type=simple
-ExecStart=/usr/local/bin/rad.bash
+ExecStart=/usr/local/bin/nad.bash
 RemainAfterExit=true
 StandardOutput=null
 

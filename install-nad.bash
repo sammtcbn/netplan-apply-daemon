@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SERVICE_NAME=rad.service
+SERVICE_NAME=nad.service
 
 function failed()
 {
@@ -8,8 +8,8 @@ function failed()
     exit 1
 }
 
-cp -f rad.bash /usr/local/bin || failed "install fail"
-cp -f rad-uninstall.bash /usr/local/bin || failed "install fail"
+cp -f nad.bash /usr/local/bin || failed "install fail"
+cp -f nad-uninstall.bash /usr/local/bin || failed "install fail"
 
 cp -f ${SERVICE_NAME} /etc/systemd/system || failed "install fail"
 systemctl daemon-reload || failed "install fail"
